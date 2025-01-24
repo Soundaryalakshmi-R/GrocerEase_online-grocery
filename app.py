@@ -17,7 +17,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'lakshmi'  
 
-db=SQLAlchemy(app)
+db.init_app(app)
 migrate = Migrate(app, db)
 
 login_manager = LoginManager(app)
