@@ -12,7 +12,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__,static_url_path='/static')
 app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
  
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('Database_URL','')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL','postgresql://neondb_owner:npg_9ErAbXDkYR8M@ep-shrill-dust-a1dfhlo0-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'lakshmi'  
