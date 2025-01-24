@@ -7,6 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, login_user
 #from models.py import item
 from werkzeug.utils import secure_filename
+from sqlalchemy.dialects import postgresql 
 
  
 app = Flask(__name__,static_url_path='/static')
