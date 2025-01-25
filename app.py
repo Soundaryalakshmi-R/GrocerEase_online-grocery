@@ -18,6 +18,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'lakshmi'  
 
+if os.getenv('FLASK_ENV') == 'production':
+    app.config['SERVER_NAME'] = 'grocer-ease-online-grocery.vercel.app'
+else:
+    app.config['SERVER_NAME'] = 'localhost:5000'
+
 db.init_app(app)
 migrate = Migrate(app, db)
 
