@@ -13,11 +13,13 @@
 
       <!-- Buttons for Add, Delete, and Update -->
       <div class="buttons">
-        <button onclick="redirectTo('addProductForm')">Add Product</button>
-        <button onclick="redirectTo('deleteProductForm')">
+        <button onclick="redirectTo(url_for('addProductForm'))">
+          Add Product
+        </button>
+        <button onclick="redirectTo(url_for('deleteProductForm'))">
           Delete Product
         </button>
-        <button onclick="redirectTo('updateProductForm')">
+        <button onclick="redirectTo(url_for('updateProductForm'))">
           Update Product
         </button>
       </div>
